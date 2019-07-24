@@ -19,3 +19,15 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+todo
+.entry
+.happypack
+_package
+_dist
+yarn.lock
+/_tmp
+package-lock.json
+.tea
+.vscode
+.history
