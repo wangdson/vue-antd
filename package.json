@@ -15,16 +15,29 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wangdson/vue-antd"
+    "url": "https://github.com/wangdson/vue-antd.git"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "clipboard": "^2.0.1",
     "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+    "date-fns": "^1.29.0",
+    "enquire.js": "^2.1.6",
+    "mockjs": "^1.0.1-beta3",
+    "node-emoji": "^1.10.0",
+    "pouchdb": "^7.0.0",
+    "viser-vue": "^2.2.5",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.1",
+    "vuedraggable": "^2.16.0",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@antv/data-set": "^0.10.2",
     "@vue/cli-plugin-babel": "^3.9.0",
     "@vue/cli-plugin-eslint": "^3.9.0",
     "@vue/cli-service": "^3.9.0",
+    "ant-design-vue": "^1.3.13",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^13.0.1",
@@ -33,6 +46,10 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^5.0.0",
+    "jest": "^22.0.4",
+    "jest-serializer-vue": "^0.3.0",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
     "pre-commit": "^1.2.2",
     "vue-template-compiler": "^2.6.10"
   },

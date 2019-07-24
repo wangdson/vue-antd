@@ -1,3 +1,8 @@
 node_modules
 .entry
 .tea
+/build/
+/config/
+/dist/
+/*.js
+/test/**/*
