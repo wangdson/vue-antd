@@ -30,7 +30,7 @@ function isObject(obj) {
  * {%getIn%}
  * @returns {any} expected - 获取的值
  */
-export function getIn(state, array, initial = null) {
+function getIn(state, array, initial = null) {
   let obj = Object.assign({}, state);
   // when is undefined return init immediately
   if (typeof obj !== 'object' || obj === null) {
@@ -60,7 +60,7 @@ export function getIn(state, array, initial = null) {
  * {%getIn%}
  * @returns {any} 设置对应的值
  */
-export function setIn(state, array, value) {
+function setIn(state, array, value) {
   if (!array) return state;
   const setRecursively = function(state, array, value, index) {
     let clone = {};
@@ -98,7 +98,7 @@ export function setIn(state, array, value) {
  * {%deleteIn%}
  * @returns {any} expected - 返回删除后新的对象 or 值
  */
-export function deleteIn(state, array) {
+function deleteIn(state, array) {
   const deleteRecursively = function (state, array, index) {
     let clone = {};
     const prop = array[index];
@@ -141,7 +141,7 @@ export function deleteIn(state, array) {
  * @example <caption>Example usage of compose.</caption>
  * {%compose%}
  */
-export function compose(array) {
+function compose(array) {
   return array.reduce((p, v) => {
     console.log(p, v);
     if (isFunc(v)) {
@@ -154,3 +154,11 @@ export function compose(array) {
     return p;
   });
 }
+
+// 数据操作类
+exports.default = {
+  compose: compose,
+  deleteIn: deleteIn,
+  setIn: setIn,
+  getIn: getIn,
+};

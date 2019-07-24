@@ -1,5 +1,9 @@
 {
-  "extends": "standard",
+  // "extends": "standard",
+  "extends": [
+    // add more generic rulesets here, such as:
+    "plugin:vue/recommended"
+  ],
   "globals": {
     "my": true,
     "wx": true,
@@ -9,9 +13,15 @@
     "Component": true,
     "localStorage": true,
     "parseInt": true,
-    "getCurrentPages": false
+    "getCurrentPages": false,
+    "module": true,
+    "exports": true,
   },
-  "parser": "babel-eslint",
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "sourceType": "module"
+  },
+  // "parser": "babel-eslint",
   "rules": {
     "indent": ["error", 2, {"SwitchCase": 1}], // 换行空格占位2位
     "semi": ["error", "always"],//语句强制分号结尾
@@ -32,5 +42,6 @@
     "no-debugger": 2, // 禁止使用debugger
     "no-dupe-keys": 2,//在创建对象字面量时不允许键重复 {a:1,a:1}
     "prefer-const": 0,//首选const
+    "vue/require-default-prop": 0,
   }
 }
